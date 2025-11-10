@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achat de billet</title>
+    <link rel="stylesheet" href="style_billet.css">
+</head>
+<body>
+     <header><h1>Achat de billet</h1></header>
+  <main>
+    <form id="formAchat" class="formulaire">
+      <label>Nom complet :</label>
+      <input type="text" id="nom" required>
+      <label>Concert :</label>
+      <input type="text" id="concert" readonly>
+      <label>Prix unitaire (Franc CFA) :</label>
+      <input type="number" id="prix" readonly>
+      <label>Nombre de billets :</label>
+      <input type="number" id="quantite" min="1" max="5" value="1" required>
+      <p class="total">Total : <span id="total">0</span> franc CFA</p>
+      <button type="submit" class="btn">Confirmer l’achat</button>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* ======= RESET + BASE ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1d, #2e2e33);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ======= HEADER ======= */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  color: #ffcb05;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+  color: #ffcb05;
+  border-bottom: 2px solid #ffcb05;
+  padding-bottom: 4px;
+}
+
+/* ======= MAIN GRID ======= */
+main.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 50px;
+}
+
+/* ======= CARD STYLE ======= */
+.card {
+  background: #252529;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 203, 5, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+  font-size: 1.2em;
+  color: #ffcb05;
+}
+
+.card p {
+  margin: 0 15px 10px;
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+.card .prix {
+  font-weight: bold;
+  color: #00ff9d;
+  font-size: 1.1em;
+}
+
+/* ======= BUTTON ======= */
+.btn {
+  display: inline-block;
+  background: #ffcb05;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  main.grid {
+    padding: 30px 15px;
+  }
+}
