@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmation d’achat - ConcertGo</title>
+  <link rel="stylesheet" href="style_conf.css">
+</head>
+<body>
+  <header><h1>Merci pour votre achat !</h1></header>
+  <main class="formulaire">
+    <p id="resume"></p>
+    <a href="index.html" class="btn">Retour à l’accueil</a>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nom = params.get("nom");
+    const concert = params.get("concert");
+    const total = params.get("total");
+    document.getElementById("resume").innerHTML =
+      `<strong>${nom}</strong>, votre réservation pour <em>${concert}</em> est confirmée.<br>Total payé : <strong>${total} franc CFA</strong>`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* ======= RESET + BASE ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1d, #2e2e33);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ======= HEADER ======= */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  color: #ffcb05;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+}
+
+/* ======= FORMULAIRE CONTACT ======= */
+main.formulaire {
+  background: #252529;
+  margin-top: 80px;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  animation: fadeIn 0.7s ease;
+  max-width: 450px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+main.formulaire label {
+  color: #ffcb05;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+main.formulaire input,
+main.formulaire textarea {
+  background: #1c1c1f;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 1em;
+  resize: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+main.formulaire input:focus,
+main.formulaire textarea:focus {
+  border-color: #ffcb05;
+  box-shadow: 0 0 5px #ffcb05;
+  outline: none;
+}
+
+/* ======= BUTTON ======= */
+.btn {
+  background: #ffcb05;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* ======= ANIMATION ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 500px) {
+  header {
+    font-size: 1.5em;
+  }
+
+  main.formulaire {
+    margin-top: 60px;
+    padding: 25px 20px;
+  }
+}
