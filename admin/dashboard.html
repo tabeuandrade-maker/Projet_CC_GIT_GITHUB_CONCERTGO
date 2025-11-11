@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - ConcertGo</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>🎛️ Tableau de bord - ConcertGo</h1>
+    <nav>
+      <a href="dashboard.html" class="active">Accueil admin</a>
+      <a href="ajouter.html">Ajouter un concert</a>
+      <a href="../index.html" target="_blank">Voir le site</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div class="card">
+        <h3>🎤 Concerts en ligne</h3>
+        <p id="nbConcerts">3</p>
+      </div>
+      <div class="card">
+        <h3>💸 Billets vendus</h3>
+        <p id="nbBillets">45</p>
+      </div>
+      <div class="card">
+        <h3>📈 Revenus estimés</h3>
+        <p id="revenus">3 200 €</p>
+      </div>
+    </section>
+
+    <section class="liste-concerts">
+      <h2>Liste des concerts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Ville</th>
+            <th>Date</th>
+            <th>Prix (€)</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="concertTable">
+          <tr>
+            <td>Coldplay Live</td>
+            <td>Paris</td>
+            <td>12/12/2025</td>
+            <td>80</td>
+            <td><button class="delete-btn">Supprimer</button></td>
+          </tr>
+          <tr>
+            <td>Burna Boy Tour</td>
+            <td>Lyon</td>
+            <td>18/12/2025</td>
+            <td>60</td>
+            <td><button class="delete-btn">Supprimer</button></td>
+          </tr>
+          <tr>
+            <td>Aya Nakamura Show</td>
+            <td>Marseille</td>
+            <td>20/12/2025</td>
+            <td>50</td>
+            <td><button class="delete-btn">Supprimer</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
