@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login - ConcertGo</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>🔒 Connexion Admin</h1>
+  </header>
+
+  <main class="container">
+    <form id="loginForm" class="formulaire">
+      <label>Nom d'utilisateur :</label>
+      <input type="text" id="user" required>
+
+      <label>Mot de passe :</label>
+      <input type="password" id="pass" required>
+
+      <button type="submit" class="btn">Se connecter</button>
+    </form>
+    <p style="text-align:center;margin-top:10px;color:#666">Mot de passe par défaut : <strong>admin123</strong></p>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('pass').value;
+      // Simple client-side check (démo uniquement)
+      if (pass === 'admin123') {
+        // mark as "logged in" via sessionStorage for the demo
+        sessionStorage.setItem('admin_logged', 'true');
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('Identifiants incorrects.');
+      }
+    });
+    // Prevent direct access if not "logged in" (basic demo protection)
+    if (window.location.pathname.endsWith('dashboard.html') || window.location.pathname.endsWith('/admin/dashboard.html')) {
+      if (sessionStorage.getItem('admin_logged') !== 'true') {
+        window.location.href = 'login.html';
+      }
+    }
+  </script>
+</body>
+</html>
