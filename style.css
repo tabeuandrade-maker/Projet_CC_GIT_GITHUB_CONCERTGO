@@ -1,0 +1,62 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+header {
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('https://picsum.photos/1200/400?concert') center/cover;
+  color: white;
+}
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #0056b3;
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover { transform: scale(1.05); }
+.card img { width: 100%; }
+.formulaire {
+  background: white;
+  width: 350px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.total { font-weight: bold; text-align: center; color: #007bff; }
